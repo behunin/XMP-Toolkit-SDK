@@ -1,5 +1,5 @@
 # ==============================================================================
-cmake_minimum_required(VERSION 2.8.6)
+cmake_minimum_required(VERSION 3.15.0)
 
 # Enable folder grouping of projects in IDEs
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
@@ -263,7 +263,7 @@ endif()
 if(UNIX)
 	if (NOT APPLE AND NOT ANDROID)
 		if (${XMP_BUILD_STATIC})
-			message (STATUS "staticXMPCore no longer moved")
+			message (STATUS "staticXMPCore")
 		else()
 			if((${CMAKE_BUILD_TYPE} MATCHES "Debug") OR (${CMAKE_BUILD_TYPE} MATCHES "debug") )
 				add_custom_command (TARGET ${TARGET_NAME}
